@@ -1,0 +1,25 @@
+.Page {
+
+    position: relative;
+    top: 0;
+    width: auto;
+    height: 100%;
+    margin-left: 90px;
+    overflow: hidden;
+    background-color: #213340;
+
+    .Page__content {
+        height: 100%;
+        padding: 50px;
+        color: white;
+        overflow-y: scroll;
+
+        &:after { /* Bottom padding shim */
+            content: "";
+            position: relative;
+            height: 50px;
+            display: block;
+        }
+    }
+
+}

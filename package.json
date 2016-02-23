@@ -5,11 +5,12 @@
   "private": true,
   "scripts": {
     "start": "npm run start:development",
-    "start:development": "npm run serve:development",
+    "start:development": "npm run clean && npm run serve:development",
     "start:production": "npm run webpack && npm run serve:production",
     "serve:development": "NODE_ENV=development BABEL_ENV=development node server.js",
     "serve:production": "NODE_ENV=production BABEL_ENV=production node server.js",
     "webpack": "NODE_ENV=production BABEL_ENV=production webpack --config webpack.production.config.js",
+    "clean": "rm -rf dist",
     "postinstall": ""
   },
   "babel": {

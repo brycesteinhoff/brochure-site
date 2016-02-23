@@ -43,7 +43,7 @@ module.exports = {
 	},
 
 	sassLoader: {
-		includePaths: [path.resolve(__dirname, './assets')]
+		// includePaths: [path.resolve(__dirname)]
 	},
 	
 	module: {

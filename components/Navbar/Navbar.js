@@ -2,26 +2,30 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 // Styles
-import '../assets/sass/some_component';
+import './style.scss';
 
-class Front extends Component {
+class Navbar extends Component {
     constructor(props) {
         super(props);
     };
 
     render() {
-        const { children, inputValue } = this.props;
+        const { children } = this.props;
 
         return (
-            <div className="some_component">
-                <span>This is the front page</span>
-                {children}
+            <div className="Navbar">
+                <ul>
+    				<li><a href="#"></a></li>
+    				<li><a href="#"></a></li>
+    				<li><a href="#"></a></li>
+    				<li><a href="#"></a></li>
+    			</ul>
             </div>
         );
     };
 }
 
-Front.propTypes = {
+Navbar.propTypes = {
     // Injected by React Redux
     //
     // Injected by React Router
@@ -33,4 +37,4 @@ function mapStateToProps(state, ownProps) {
     };
 };
 
-export default connect(mapStateToProps, {})(Front);
+export default connect(mapStateToProps, {})(Navbar);

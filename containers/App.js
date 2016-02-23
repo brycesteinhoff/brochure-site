@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-// Styles
-import 'normalize.css';
+import Navbar from '../components/Navbar/Navbar';
 
 class App extends Component {
     constructor(props) {
@@ -10,11 +9,11 @@ class App extends Component {
     };
 
     render() {
-        const { children, inputValue } = this.props;
+        const { children } = this.props;
 
         return (
-            <div>
-                <span>This is the app container</span>
+            <div className="App">
+                <Navbar />
                 {children}
             </div>
         );
