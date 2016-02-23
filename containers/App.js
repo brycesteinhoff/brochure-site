@@ -1,6 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
+// Styles
+import 'normalize.css';
+
 class App extends Component {
     constructor(props) {
         super(props);

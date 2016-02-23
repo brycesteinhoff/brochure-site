@@ -1,6 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
+// Styles
+import '../assets/sass/some_component';
+
 class Front extends Component {
     constructor(props) {
         super(props);
@@ -10,7 +13,7 @@ class Front extends Component {
         const { children, inputValue } = this.props;
 
         return (
-            <div>
+            <div className="some_component">
                 <span>This is the front page</span>
                 {children}
             </div>
