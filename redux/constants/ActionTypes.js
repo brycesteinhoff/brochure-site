@@ -1,0 +1,1 @@
+export const PAGE_SWITCH = 'PAGE_SWITCH'
