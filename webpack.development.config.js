@@ -26,6 +26,7 @@ module.exports = {
 	},
 
 	plugins: [
+		new webpack.DefinePlugin({ 'process.env.NODE_ENV': '"development"' }), // pass to modules
 		new webpack.optimize.OccurenceOrderPlugin(),
 	    new webpack.HotModuleReplacementPlugin(),
 	    new webpack.NoErrorsPlugin()
