@@ -1,0 +1,33 @@
+@import "../../assets/sass/variables.scss";
+
+.Nav_Button {
+
+	width: 90px;
+    height: 90px;
+    display: block;
+
+    transition: height 0.15s ease, width 0.15s ease;
+
+    &:hover,
+    &.active {
+    	width: 95px;
+    	height: 95px;
+    }
+
+	&.front {
+		background-color: $color-front;
+	}
+
+	&.skills {
+		background-color: $color-skills;
+	}
+
+	&.work {
+		background-color: $color-work;
+	}
+
+	&.contact {
+		background-color: $color-contact;
+	}
+
+}

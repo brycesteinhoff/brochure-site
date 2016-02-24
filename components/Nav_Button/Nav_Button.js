@@ -9,15 +9,20 @@ import './style.scss';
 class Nav_Button extends Component {
     constructor(props) {
         super(props);
+        this.handleClick = this.handleClick.bind(this);
     };
 
-    changeRoute(route) {
-        this.props.dispatch(actionCreators.changeRoute(route));
-    }
+    handleClick(e) {
+        e.preventDefault();
+
+        this.props.dispatch(
+            actionCreators.changeRoute(this.props.path)
+        );
+    };
 
     render() {
         return (
-            <a className={this.props.className} onClick={() => this.changeRoute(this.props.path)}></a>
+            <a href={this.props.path} className={'Nav_Button ' + this.props.className} onClick={this.handleClick}></a>
         );
     };
 }
@@ -27,6 +32,7 @@ Nav_Button.propTypes = {
 
 function mapStateToProps(state, ownProps) {
     return {
+        
     };
 };
 

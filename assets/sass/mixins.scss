@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+//
+// Gap generators
+//
+
+@mixin segment() {
+	margin-bottom: $gap-medium;
+
+	@media (min-width: $break-md) {
+		margin-bottom: $gap-medium-md;
+	}
+}
+
+@mixin segment-small() {
+	margin-bottom: $gap-small;
+
+	@media (min-width: $break-md) {
+		margin-bottom: $gap-small-md;
+	}
+}

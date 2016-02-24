@@ -1,3 +1,12 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+// Normalize.css imported in Root.js
+
+//
+// Border-box
+//
+
 * {
 	box-sizing: border-box;
 }
@@ -6,6 +15,10 @@
 *:after {
 	box-sizing: border-box;
 }
+
+//
+// Top-level structure
+//
 
 body,html {
     width: 100%;
@@ -20,3 +33,24 @@ body,html {
     height: 100%;
     overflow: hidden;
 }
+
+body {
+	background-color: $color-background;
+}
+
+//
+// Scaffolding
+//
+
+p {
+	margin-top: 0;
+	@include segment();
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	line-height: $line-height-computed;
+}
+
+::selection { background: $white-light; text-shadow: none; }

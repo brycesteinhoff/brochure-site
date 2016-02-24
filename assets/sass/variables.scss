@@ -1,0 +1,42 @@
+//
+// Font
+//
+
+$font-size-base: 18px;
+$line-height-base: 1.25;
+$line-height-computed: floor(($font-size-base * $line-height-base));
+
+//
+// Colors
+//
+
+$color-background: #0f1a22;
+
+// Primary page colors
+$color-front: #0e446a;
+$color-skills: #d78f06;
+$color-work: #2a7b6d;
+$color-contact: #c93e58;
+
+// Utilities
+$white-light: transparentize(white, 0.7);
+
+//
+// Breakpoints
+//
+
+$break-sm: 500px;
+$break-md: 768px;
+
+//
+// Gaps
+//
+
+$gap-small: 5px;
+$gap-small-md: 10px;
+
+$gap-medium: 15px;
+$gap-medium-md: 25px;
+
+$gap-x-large: 40px;
+$gap-x-large-md: 65px;

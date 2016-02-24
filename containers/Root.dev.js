@@ -1,18 +1,19 @@
 import React, { Component, PropTypes } from 'react';
 import { Provider } from 'react-redux';
-import { default as routes } from '../routes';
-import DevTools from '../components/DevTools';
 import { Router } from 'react-router';
+import { default as routes } from '../routes';
+import App from './App';
+import DevTools from '../components/DevTools';
 
 export default class Root extends Component {
     render() {
         const { store, history } = this.props;
         return (
             <Provider store={store}>
-                <div className="Dev_wrapper">
+                <App>
                     <Router history={history} routes={routes} />
                     <DevTools />
-                </div>
+                </App>
             </Provider>
         );
     };
