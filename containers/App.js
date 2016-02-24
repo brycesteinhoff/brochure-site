@@ -21,10 +21,7 @@ class App extends Component {
 }
 
 App.propTypes = {
-    // Injected by React Redux
-    //
-    // Injected by React Router
-    children: PropTypes.node
+    children: PropTypes.node // injected by React Router
 }
 
 function mapStateToProps(state, ownProps) {

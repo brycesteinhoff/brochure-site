@@ -11,8 +11,6 @@ class Front extends Component {
     };
 
     render() {
-        const { children } = this.props;
-
         return (
             <div className="Page Front">
                 <div className="Page__content">
@@ -33,10 +31,6 @@ class Front extends Component {
 }
 
 Front.propTypes = {
-    // Injected by React Redux
-    //
-    // Injected by React Router
-    children: PropTypes.node
 }
 
 function mapStateToProps(state, ownProps) {

@@ -1,28 +1,27 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
+// Styles
+import '../../assets/sass/Page';
+import './style.scss';
+
 class Skills extends Component {
     constructor(props) {
         super(props);
     };
 
     render() {
-        const { children } = this.props;
-
         return (
-            <div>
-                <span>This is the skills page</span>
-                {children}
+            <div className="Page Skills">
+                <div className="Page__content">
+                    <span>This is the skills page</span>
+                </div>
             </div>
         );
     };
 }
 
 Skills.propTypes = {
-    // Injected by React Redux
-    //
-    // Injected by React Router
-    children: PropTypes.node
 }
 
 function mapStateToProps(state, ownProps) {

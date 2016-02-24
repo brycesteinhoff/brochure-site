@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
+import Nav_Button from '../Nav_Button/Nav_Button';
+
 // Styles
 import './style.scss';
 
@@ -10,15 +12,11 @@ class Navbar extends Component {
     };
 
     render() {
-        const { children } = this.props;
-
         return (
             <div className="Navbar">
                 <ul>
-    				<li><a href="#"></a></li>
-    				<li><a href="#"></a></li>
-    				<li><a href="#"></a></li>
-    				<li><a href="#"></a></li>
+    				<li><Nav_Button path="/" className="front" /></li>
+                    <li><Nav_Button path="/skills" className="skills" /></li>
     			</ul>
             </div>
         );
@@ -26,10 +24,6 @@ class Navbar extends Component {
 }
 
 Navbar.propTypes = {
-    // Injected by React Redux
-    //
-    // Injected by React Router
-    children: PropTypes.node
 }
 
 function mapStateToProps(state, ownProps) {
@@ -37,4 +31,4 @@ function mapStateToProps(state, ownProps) {
     };
 };
 
-export default connect(mapStateToProps, {})(Navbar);
+export default connect(mapStateToProps)(Navbar);
