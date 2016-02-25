@@ -76,6 +76,10 @@ p {
 	}
 }
 
+a {
+	color: white;
+}
+
 h1 {
 	@include segment();
 

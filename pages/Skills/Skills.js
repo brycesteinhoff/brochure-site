@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import Skills_Icons from '../../components/Skills_Icons/Skills_Icons_Collection';
+import Skills_Icons_Collection from '../../components/Skills_Icons/Skills_Icons_Collection';
 
 // Styles
 import '../../assets/sass/Page';
@@ -21,9 +21,9 @@ class Skills extends Component {
 
                         <div className="Page__box">
                             <p>The web moves fast, and there are fantastic new tools being created all the time that allow developers to leverage the web in new ways. I enjoy staying sharp by learning and hacking the evolving technologies of the web.</p>
-                            <p>Below are a some of the languages and software for which I'm proficient.</p>
+                            <p>Below are a some of the languages and software in which I have experience.</p>
 
-                            <Skills_Icons />
+                            <Skills_Icons_Collection />
                         </div>
                     </div>
                 </div>

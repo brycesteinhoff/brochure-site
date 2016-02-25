@@ -12,7 +12,7 @@ class Skills_Icon extends Component {
     render() {
         return (
             <div className="Skills_Icon">
-                
+                <img src={'/assets/img/tech-icons/' + this.props.icon} title={this.props.name} />
             </div>
         );
     };

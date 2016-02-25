@@ -1,0 +1,35 @@
+.Skills_Icons_Collection {
+
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+	justify-content: center;
+
+}
+
+.Skills_Icon {
+
+	width: 150px;
+	height: 150px;
+	margin: 5px;
+	padding: 20px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	transition: width 0.15s ease, height 0.15s ease, margin 0.15s ease;
+
+	&:hover {
+		width: 156px;
+		height: 156px;
+		margin: 2px;
+	}
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		display: block;
+	}
+
+}
