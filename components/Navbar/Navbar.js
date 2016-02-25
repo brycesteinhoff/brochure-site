@@ -14,13 +14,15 @@ class Navbar extends Component {
     render() {
         return (
             <div className="Navbar">
-                <p className="Navbar__title">MENU</p>
-                <ul>
-    				<li><Nav_Button path="/" className="front" /></li>
-                    <li><Nav_Button path="/skills" className="skills" /></li>
-                    <li><Nav_Button path="/work" className="work" /></li>
-                    <li><Nav_Button path="/contact" className="contact" /></li>
-    			</ul>
+                <div className="Navbar__inner">
+                    <p className="Navbar__title">MENU</p>
+                    <ul className="Navbar__nav">
+        				<li><Nav_Button path="/" className="front" flyoutLabel="Welcome" /></li>
+                        <li><Nav_Button path="/skills" className="skills" flyoutLabel="Skills" /></li>
+                        <li><Nav_Button path="/work" className="work" flyoutLabel="work" /></li>
+                        <li><Nav_Button path="/contact" className="contact" flyoutLabel="Contact" /></li>
+        			</ul>
+                </div>
             </div>
         );
     };

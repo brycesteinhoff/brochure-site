@@ -57,6 +57,10 @@ module.exports = {
 			{
 				test: /\.s?css$/, // Match scss or css
 				loader: 'style-loader!' + sassLoaders.join('!')
+			},
+			{
+				test: /\.(ttf|eot|svg|woff2?)$/,
+				loader: 'file-loader'
 			}
 		]
 	}

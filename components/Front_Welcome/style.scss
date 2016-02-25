@@ -1,0 +1,44 @@
+@import "../../assets/sass/variables.scss";
+@import "../../assets/sass/mixins.scss";
+
+.Front_Welcome {
+	@include segment-large();
+}
+
+.Front_Welcome__title {
+
+	@include segment-large();
+
+	text-align: center;
+
+	h1 {
+		margin: 0 auto;
+		display: inline-block;
+
+		.last {
+			font-family: 'BebasBook';
+		}
+
+		.sub-line {
+			padding: 8px;
+			font-size: $font-size-base;
+			font-family: 'SourceSemibold';
+			line-height: 1em;
+			color: $color-front;
+			background-color: white;
+
+			text-shadow: none;
+			box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.1);
+
+			@media (min-width: $break-md) {
+				padding: 10px;
+				font-size: $font-size-large;
+			}
+		}
+	}
+
+}
+
+.Front_Welcome__intro {
+	text-align: center;
+}

@@ -19,3 +19,11 @@
 		margin-bottom: $gap-small-md;
 	}
 }
+
+@mixin segment-large() {
+	margin-bottom: $gap-x-large;
+
+	@media (min-width: $break-md) {
+		margin-bottom: $gap-x-large-md;
+	}
+}

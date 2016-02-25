@@ -22,7 +22,14 @@ class Nav_Button extends Component {
 
     render() {
         return (
-            <a href={this.props.path} className={'Nav_Button ' + this.props.className} onClick={this.handleClick}></a>
+            <a href={this.props.path} className={'Nav_Button ' + this.props.className + ' ' + this.props.active} onClick={this.handleClick}>
+                <div className="Nav_Button__icon">
+                    <i />
+                </div>
+                <div className="Nav_Button__flyout">
+                    {this.props.flyoutLabel}
+                </div>
+            </a>
         );
     };
 }
@@ -32,7 +39,10 @@ Nav_Button.propTypes = {
 
 function mapStateToProps(state, ownProps) {
     return {
-        
+        // Is this a valid place to get current route?
+        // https://github.com/reactjs/redux/issues/637
+        // https://github.com/reactjs/react-router-redux/pull/259
+        active: (state.routing.locationBeforeTransitions.pathname == ownProps.path) ? 'active' : ''
     };
 };
 

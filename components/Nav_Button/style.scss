@@ -2,31 +2,130 @@
 
 .Nav_Button {
 
-	width: 90px;
-    height: 90px;
+	position: relative;
+	text-decoration: none;
+    overflow: hidden;
+    z-index: 0;
     display: block;
 
-    transition: height 0.15s ease, width 0.15s ease;
+    transition: box-shadow 0.15s ease;
+
+	@media (min-width: $break-sm) {
+		width: 90px;
+    	height: 90px;
+
+    	transition: width 0.15s ease;
+	}
+
+    &:hover {
+    	@media (min-width: $break-sm) {
+    		width: 285px;
+
+	    	&:not(.active) {
+	    		z-index: 1000;
+	    		box-shadow: 0 0 5px 0 rgba(0,0,0,0.20);
+	    	}
+    	}
+    }
+
+    &.active {
+    	@media (min-width: $break-sm) {
+    		width: 95px !important;
+    	}
+    	
+    	cursor: default;
+    }
 
     &:hover,
     &.active {
-    	width: 95px;
-    	height: 95px;
+    	.Nav_Button__icon {
+    		i {
+	    		opacity: 1;
+	    		background-size: 100% 100%;
+	    	}
+    	}
+    }
+
+    // Icon
+    .Nav_Button__icon {
+    	position: relative;
+    	width: 100%;
+    	padding: 15px 0;
+
+    	i {
+	    	content: "";
+			position: relative;
+			width: 30px;
+			height: 30px;
+			margin: 0 auto;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 95% 95%;
+			opacity: 0.85;
+			display: block;
+
+			transition: opacity 0.15s ease, background-size 0.15s ease;
+
+			@media (min-width: $break-sm) {
+				width: 40px;
+				height: 40px;
+				margin: 0;
+			}
+	    }
+
+	    @media (min-width: $break-sm) {
+	    	padding: 25px;
+	    }
+    }
+
+    // Flyout
+    .Nav_Button__flyout {
+    	display: none;
+
+    	@media (min-width: $break-sm) {
+    		position: absolute;
+	    	width: 180px;
+	    	top: 30px;
+	    	left: 95px;
+	    	color: white;
+	    	font-size: $font-size-large;
+	    	font-family: 'BebasBold';
+	    	letter-spacing: 2px;
+	    	text-align: center;
+	    	text-transform: uppercase;
+	    	display: block;
+    	}
     }
 
 	&.front {
+		.Nav_Button__icon i {
+			background-image: url('/assets/img/icon-front.svg');
+		}
+
 		background-color: $color-front;
 	}
 
 	&.skills {
+		.Nav_Button__icon i {
+			background-image: url('/assets/img/icon-skills.svg');
+		}
+		
 		background-color: $color-skills;
 	}
 
 	&.work {
+		.Nav_Button__icon i {
+			background-image: url('/assets/img/icon-work.svg');
+		}
+		
 		background-color: $color-work;
 	}
 
 	&.contact {
+		.Nav_Button__icon i {
+			background-image: url('/assets/img/icon-contact.svg');
+		}
+		
 		background-color: $color-contact;
 	}
 

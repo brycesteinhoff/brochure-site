@@ -13,6 +13,8 @@ if (process.env.NODE_ENV !== 'production') {
 	app.use(webpackHotMiddleware(compiler));
 }
 
+app.use('/assets/img', express.static('assets/img'));
+app.use('/assets/fonts', express.static('assets/fonts'));
 app.use('/dist', express.static('dist'));
 
 app.use(function(req, res) {

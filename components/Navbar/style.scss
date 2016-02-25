@@ -3,29 +3,59 @@
 
 .Navbar {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 90px;
-    height: 100%;
-    background-color: $color-background;
-    display: block;
+    width: 100%;
+    height: 60px;
     z-index: 1000;
 
-    box-shadow: 5px 0 0 0 rgba(0,0,0,0.25);
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
 
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+    @media (min-width: $break-sm) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90px;
+        height: 100%;
+        background-color: $color-background;
+        display: flex;
+        align-items: center;
+
+        box-shadow: 5px 0 0 0 rgba(0,0,0,0.25);
     }
-    
+}
+
+.Navbar__inner {
+    @media (min-width: $break-sm) {
+        flex: 0 0 100%;
+    }
 }
 
 .Navbar__title {
-    @include segment-small();
+    display: none;
 
-    color: $white-light;
-    size: 6px;
-    text-align: center;
-    letter-spacing: 2px;
+    @media (min-width: $break-sm) {
+        width: 90px;
+        margin: $gap-small-md 0;
+        color: $white-light;
+        font-size: $font-size-small;
+        text-align: center;
+        letter-spacing: 2px;
+        display: block;
+    }
+}
+
+ul.Navbar__nav {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        width: 25%;
+
+        @media (min-width: $break-sm) {
+            display: block;
+            width: 100%;
+        }
+    }
 }

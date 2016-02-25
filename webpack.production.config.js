@@ -50,6 +50,10 @@ module.exports = {
 			{
 				test: /\.s?css$/, // Match scss or css
 				loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
+			},
+			{
+				test: /\.(ttf|eot|svg|woff2?)$/,
+				loader: 'file-loader'
 			}
 		]
 	}
