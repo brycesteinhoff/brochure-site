@@ -54,12 +54,29 @@
 }
 
 .Page__box {
-    padding: $gap-medium;
     background-color: $white-light;
 
     box-shadow: 0 5px 0 0 rgba(0,0,0,0.03);
+}
+
+.Page__box__padded {
+    padding: $gap-medium;
 
     @media (min-width: $break-md) {
         padding: $gap-medium-md;
+    }
+}
+
+.Page__box__image {
+    padding: $gap-small;
+    background-color: white;
+
+    @media (min-width: $break-md) {
+        padding: $gap-small-md;
+    }
+    
+    img {
+        max-width: 100%;
+        display: block;
     }
 }

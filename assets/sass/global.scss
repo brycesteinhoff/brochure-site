@@ -67,6 +67,16 @@ body {
 	}
 }
 
+.smaller-text {
+	font-size: $font-size-small;
+	line-height: floor(($font-size-small * $line-height-base));
+
+	@media (min-width: $break-md) {
+		font-size: $font-size-base;
+		line-height: floor(($font-size-base * $line-height-base));
+	}
+}
+
 p {
 	margin-top: 0;
 	@include segment();

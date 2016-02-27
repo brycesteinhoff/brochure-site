@@ -18,8 +18,10 @@ class Contact extends Component {
                         <h2>Let's Talk!</h2>
 
                         <div className="Page__box">
-                            <p>If you're looking to add a talented developer to your team, I'd love to chat!</p>
-                            <p>Please send an email to <a href="mailto:bryce@brycesteinhoff.com">bryce@brycesteinhoff.com</a>.</p>
+                            <div className="Page__box__padded">
+                                <p>If you're looking to add a talented developer to your team, I'd love to chat!</p>
+                                <p>Please send an email to <a href="mailto:bryce@brycesteinhoff.com">bryce@brycesteinhoff.com</a>.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

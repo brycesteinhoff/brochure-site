@@ -17,6 +17,13 @@ class Front extends Component {
             <div className="Page Front">
                 <div className="Page__content">
                     <Front_Welcome />
+
+                    {/*<div className="container">
+                        <div className="Page__box">
+                            <div className="Page__box__padded">
+                            </div>
+                        </div>
+                    </div>*/}
                 </div>
             </div>
         );

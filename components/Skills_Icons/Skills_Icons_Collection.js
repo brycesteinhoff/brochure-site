@@ -28,6 +28,9 @@ class Skills_Icons_Collection extends Component {
                 <Skills_Icon name="Laravel Framework" icon="laravel.svg" />
                 <Skills_Icon name="MySQL RDBMS" icon="mysql.svg" />
                 <Skills_Icon name="MongoDB" icon="mongodb.svg" />
+                <Skills_Icon name="Gulp Build System" icon="gulp.svg" />
+                <Skills_Icon name="Browserify" icon="browserify.svg" />
+                <Skills_Icon name="Webpack Bundler" icon="webpack.svg" />
                 <Skills_Icon name="Git Version Control" icon="git.svg" />
                 <Skills_Icon name="Linux OS" icon="linux.svg" />
                 <Skills_Icon name="Apache Web Server" icon="apache.svg" />
